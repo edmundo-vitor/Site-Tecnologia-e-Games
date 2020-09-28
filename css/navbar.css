@@ -1,0 +1,130 @@
+.menu{
+   display: flex;
+   position: absolute;
+   bottom: 35px;
+   left: 0;
+   right: 0;
+   justify-content: center;
+   align-items: center;
+   z-index: 2;
+}
+
+.navbar{
+   justify-content: center;
+   text-decoration: none;
+   position: relative;
+}
+
+.navbar li {
+   display: inline;
+   text-decoration: none;
+   margin: 4px;
+}
+
+a{
+   display: inline-block;
+   position: relative;
+   overflow: hidden;
+   text-decoration: none;
+   color: #fff;
+   text-transform: uppercase;
+   transition: 0.2s;
+   padding: 7px;
+}
+
+.navbar li a:hover{
+   color: #000;
+   background: #fff;
+   box-shadow: 0 0 10px #fff, 0 0 40px #fff, 0 0 80px #fff;
+   transition-delay: 1s;
+}
+
+a span{
+   position: absolute;
+   display: block;
+}
+
+/*---1---*/
+a span:nth-child(1){
+   top: 0;
+   left: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(90deg, transparent, #fff);
+}
+
+a:hover span:nth-child(1){
+   left: 100%;
+   transition: 1s;
+}
+
+/*---2---*/
+a span:nth-child(2){
+   top: -100%;
+   right: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(180deg, transparent, #fff);
+}
+
+a:hover span:nth-child(2){
+   top: 100%;
+   transition: 1s;
+   transition-delay: 0.25s;
+}
+
+/*---3---*/
+a span:nth-child(3){
+   bottom: 0;
+   right: -100%;
+   width: 100%;
+   height: 2px;
+   background: linear-gradient(270deg, transparent, #fff);
+}
+
+a:hover span:nth-child(3){
+   right: 100%;
+   transition: 1s;
+   transition-delay: 0.5s;
+}
+
+/*---4---*/
+a span:nth-child(4){
+   bottom: -100%;
+   left: 0;
+   width: 2px;
+   height: 100%;
+   background: linear-gradient(360deg, transparent, #fff);
+}
+
+a:hover span:nth-child(4){
+   bottom: 100%;
+   transition: 1s;
+   transition-delay: 0.75s;
+}
+
+@media only screen and (max-device-width: 1201px) {
+   .menu{
+      font-size: 2em;
+   }
+}
+
+@media only screen and (max-device-width: 768px) {
+   .menu{
+      bottom: 20px;
+      font-size: 1.5em;
+   }
+}
+
+@media only screen and (max-device-width: 600px) {
+   .menu{
+      font-size: 1em;
+   }
+}
+
+@media only screen and (max-device-width: 460px) {
+   .menu{
+      bottom: 10px;
+      font-size: 1em;
+   }
+}

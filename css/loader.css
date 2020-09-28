@@ -1,0 +1,53 @@
+body{
+   min-width: 100vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/*LOADER inicio*/
+.loader{
+   display: flex;
+   visibility: visible;
+   position: relative;
+   width: 120px;
+   height: 120px;
+   top: 40vh;
+   left: 0vw;
+   z-index: 100;
+}
+
+.loader span{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   transform: rotate(calc(18deg * var(--i)));
+}
+
+.loader span::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 15px;
+   height: 15px;
+   background: #000;
+   border-radius: 50%;
+   animation: animate 2s linear infinite;
+   animation-delay: calc(0.1s * var(--i));
+}
+
+@keyframes animate{
+   0%{
+      transform: scale(0);
+   }
+   10%{
+      transform: scale(1.2);
+   }
+   100%{
+      transform: scale(0);
+   }
+}
+/*LOADER fim*/
