@@ -21,7 +21,7 @@
    margin: 4px;
 }
 
-a{
+.menu a{
    display: inline-block;
    position: relative;
    overflow: hidden;

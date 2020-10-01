@@ -3,18 +3,23 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
+   background-color: #fff;
+}
+div#content{
+   visibility: hidden;
 }
 
 /*LOADER inicio*/
 .loader{
-   display: flex;
+   display: block;
    visibility: visible;
-   position: relative;
+   position: absolute;
    width: 120px;
    height: 120px;
-   top: 40vh;
-   left: 0vw;
+   top: 50vh;
+   left: 50vw;
    z-index: 100;
+   transform: translateX(-50%);
 }
 
 .loader span{

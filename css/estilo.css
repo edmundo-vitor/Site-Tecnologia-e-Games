@@ -6,17 +6,17 @@
    font-family: 'Quicksand', sans-serif;
 }
 
-
 body{
-   min-height: 250vh;
+   min-height: 100vh;
+   background-color: #fff;
+   overflow-x: hidden;
 }
 
 section{
    position: relative;
-   visibility: hidden;
    width: 100%;
    height: 100vh;
-   background: url(../bg.jpg);
+   background: url(../imagens/bg.jpg);
    background-attachment: fixed;
    background-size: cover;
    display: flex;
@@ -39,9 +39,84 @@ h2{
    z-index: 1;
 }
 
+div#content{
+   visibility: visible;
+}
+
+.objetivos{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+   
+}
+
+.item{
+   display: inline-block;
+   width: 15vw;
+   height: 10vh;
+   /*border: 2px solid black;*/
+   margin: 10px 5px 25px 5px;
+   padding: 5px;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.item img{
+   display: flex;
+   position: relative;
+   width: 50px;
+   height: 50px;
+   left: 50%;
+   margin-bottom: 5px;
+   transform: translateX(-50%);
+}
+
+.item p {
+   font-size: 1em;
+   margin-bottom: 10px;
+}
+
+footer{
+   margin-top: 20px;
+   height: 100%;
+   background-color: rgba(239, 61, 233, 0.8);
+}
+
+footer .p1{
+   font-size: 1em;
+   padding-top: 15px;
+}
+
+footer p{
+   text-align: center;
+}
+
+footer a{
+   text-decoration: none;
+   color: white;
+}
+
+footer img {
+   height: 50px;
+   padding: 10px;
+   filter: invert(1);
+}
+
+
 @media only screen and (max-device-width: 770px) {
    h2{
       font-size: 4em;
+   }
+
+   .item{
+      width: 30vw;
+      margin: 0px 0px 20px 0px;
+   }
+
+   .item p {
+      font-size: 1.2em;
    }
 }
 
@@ -60,6 +135,15 @@ h2{
 @media only screen and (max-device-width: 371px) {
    h2{
       transform: translateY(-50px);
+   }
+
+   .item{
+      width: 30vw;
+      margin: 0px 0px 40px 0px;
+   }
+
+   .item p {
+      font-size: 0.7em;
    }
 }
 
